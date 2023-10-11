@@ -6,6 +6,7 @@ edition = "2021"
 [profile.release]
 lto = true
 codegen-units = 1
+debug = 1
 
 [profile.dev.package.sqlx-macros]
 opt-level = 3
