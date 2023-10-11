@@ -1,0 +1,27 @@
+[package]
+name = "auth_lite"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+lto = true
+codegen-units = 1
+
+[dependencies]
+anyhow = "1.0.75"
+axum = { version = "0.6.20", features = ["headers"] }
+base64 = "0.21.4"
+bcrypt = "0.15.0"
+clap = { version = "4.4.6", features = ["derive", "env"] }
+rpassword = "7.2.0"
+sqlx = { version = "0.7.2", features = ["sqlite", "runtime-tokio"] }
+tokio = { version = "1.33.0", features = ["full"] }
+tower-http = { version = "0.4.4", features = ["trace"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
+
+[dev-dependencies]
+assert_cmd = "2.0.12"
+assert_fs = "1.0.13"
+rexpect = "0.5.0"
+tower = { version = "0.4.13", features = ["full"] }
