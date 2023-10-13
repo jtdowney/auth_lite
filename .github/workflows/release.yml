@@ -39,4 +39,5 @@ jobs:
         with:
           bin: auth_lite
           target: ${{ matrix.target }}
+          include: LICENSE,README.md
           token: ${{ secrets.GITHUB_TOKEN }}
